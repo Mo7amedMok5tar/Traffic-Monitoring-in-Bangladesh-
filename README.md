@@ -6,7 +6,9 @@ This project utilizes YOLOv8 for real-time object detection in traffic footage f
 
 1. [Project Overview](#project-overview)  
 2. [Project Structure](#project-structure)  
-3. [Data Preparation](#data-preparation)  
+3. [Data Preparation](#data-preparation)
+   * [Dataset Overview](#dataset-overview)
+   * [Data Preprocessing](#data-preprocessing)  
 4. [Model Training & Fine-Tuning](#model-training--fine-tuning)  
 5. [Model Evaluation](#model-evaluation)  
 6. [Model Inference](#model-inference)  
@@ -23,6 +25,7 @@ This project focuses on **object detection for traffic scenes in Bangladesh** us
 
 ## Project Structure
 
+The full project is available on [Google Drive](https://drive.google.com/drive/folders/1WXSeespLo6J9ZRcWwHOUYEhPj8ProJQu?usp=sharing). On GitHub, only the `notebooks/` and `src/` folders are uploaded.
 ```
 ├── notebooks/
 │   ├── 1_data_preparation.ipynb        # Data cleaning, conversion, and organization
@@ -56,8 +59,13 @@ This project focuses on **object detection for traffic scenes in Bangladesh** us
 
 ## Data Preparation
 
-The original dataset was in an unstructured format, with labels in `.xml` (Pascal VOC) and mixed image formats.
+### Dataset Overview
 
+The dataset is sourced from the [DhakaAI Traffic Detection Dataset](https://www.kaggle.com/datasets/rifat963/dhakaai-dhaka-based-traffic-detection-dataset). It contains images of traffic in Bangladesh with XML annotations for 21 classes
+
+### Data Preprocessing
+
+The original dataset was in an unstructured format, with labels in `.xml` (Pascal VOC) and mixed image formats.
 Steps taken:
 - Converted all images to `.jpeg`
 - Transformed `.xml` labels into YOLO text format
